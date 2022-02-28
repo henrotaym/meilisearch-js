@@ -1,7 +1,3 @@
-import RequestRelatedException from "./RequestRelatedException";
-
-const exceptions = { RequestRelatedException };
-
-export { RequestRelatedException };
+const exceptions = {};
 
 export default exceptions;
