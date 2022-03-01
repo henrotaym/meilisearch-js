@@ -1,9 +1,8 @@
 import {
   instantMeiliSearch,
   MeiliSearch,
-  MeiliSearchParams,
 } from "@meilisearch/instant-meilisearch";
-import Filters from "../filters";
+import { SearchParams } from "../filters/types/search";
 
 /** Meilisearch client. */
 class Client {
@@ -38,12 +37,11 @@ class Client {
   public search<T = Record<string, any>>(
     index: string,
     searching: string,
-    filters?: Filters,
-    params?: MeiliSearchParams
+    params?: SearchParams
   ) {
     return this.client
       .index(index)
-      .search<T>(searching, { ...params, filter: filters?.format() });
+      .search<T>(searching, { ...params, filter: params?.filters?.format() });
   }
 }
 
