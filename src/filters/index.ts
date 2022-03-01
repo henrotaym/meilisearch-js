@@ -73,7 +73,7 @@ class Filters {
   public format(): string {
     return this.groups.reduce(
       (formated, group, index) =>
-        `${formated ? " " : ""}${group.format(index)}`,
+        `${formated}${formated ? " " : ""}${group.format(index)}`,
       ""
     );
   }
