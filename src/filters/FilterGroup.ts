@@ -32,11 +32,11 @@ class FilterGroup {
   public format(index: number): string {
     const filters = this.filters.reduce(
       (formated, filter, filterIndex) =>
-        `${formated} ${filter.format(filterIndex)}`,
+        `${formated ? " " : ""}${filter.format(filterIndex)}`,
       ""
     );
 
-    return `${index === 0 ? "" : this.type} (${filters})`;
+    return `${index === 0 ? "" : `${this.type} `}(${filters})`;
   }
 }
 

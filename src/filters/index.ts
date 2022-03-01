@@ -72,7 +72,8 @@ class Filters {
   /** Formatting to meilisearch filter format. */
   public format(): string {
     return this.groups.reduce(
-      (formated, group, index) => `${formated} ${group.format(index)}`,
+      (formated, group, index) =>
+        `${formated ? " " : ""}${group.format(index)}`,
       ""
     );
   }

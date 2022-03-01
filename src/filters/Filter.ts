@@ -22,7 +22,7 @@ class Filter<V extends ColumnValue> {
   }
 
   public format(index: number) {
-    return `${index === 0 ? "" : `${this.type}`} ${this.column} ${
+    return `${index === 0 ? "" : `${this.type} `}${this.column} ${
       this.operator
     } ${this.value}`;
   }
