@@ -1,6 +1,6 @@
 {
   "name": "@henrotaym/meilisearch-js",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Meilisearch helpers.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
