@@ -25,7 +25,7 @@ class FilterGroup {
     value: V,
     operator: Operator<V> = "="
   ): FilterGroup {
-    this.filters.push(new Filter(column, value, operator, "AND"));
+    this.filters.push(new Filter(column, value, operator, "OR"));
     return this;
   }
 
