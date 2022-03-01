@@ -9,6 +9,7 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "commit:all": "git add . && gitmoji -c",
     "build": "tsc",
     "lint": "eslint . --fix",
     "format": "prettier --write \"src/**/*\"",
@@ -16,7 +17,7 @@
     "prepublishOnly": "npm run lint",
     "preversion": "npm run lint",
     "version": "npm run format && git add -A src",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags && npm publish"
   },
   "repository": {
     "type": "git",

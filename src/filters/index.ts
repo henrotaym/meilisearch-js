@@ -62,7 +62,7 @@ class Filters {
       return this;
     }
 
-    if (!value || !operator) return this;
+    if (!value) return this;
 
     group.where(callback, value, operator);
     this.groups.push(group);

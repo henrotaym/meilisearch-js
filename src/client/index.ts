@@ -41,7 +41,7 @@ class Client {
   ) {
     return this.client
       .index(index)
-      .search<T>(searching, { ...params, filter: params?.filters?.format() });
+      .search<T>(searching, { ...params, filter: params?.filter?.format() });
   }
 }
 
