@@ -1,5 +1,8 @@
 import { ColumnValue, FilterType, Operator } from "./types";
 
+const formatValue = (value: string | number): string | number =>
+  typeof value === "string" && value.includes(" ") ? `"${value}"` : value;
+
 class Filter<V extends ColumnValue> {
   protected column;
 
@@ -24,7 +27,7 @@ class Filter<V extends ColumnValue> {
   public format(index: number) {
     return `${index === 0 ? "" : `${this.type} `}${this.column} ${
       this.operator
-    } ${this.value}`;
+    } ${formatValue(this.value)}`;
   }
 }
 
