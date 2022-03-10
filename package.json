@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/henrotaym/meilisearch-js#readme",
   "dependencies": {
-    "@henrotaym/helpers": "^1.0.0",
+    "@henrotaym/helpers": "^1.2.0",
     "@meilisearch/instant-meilisearch": "^0.6.0",
     "algoliasearch": "^4.12.1",
     "instantsearch.js": "^4.39.1"
